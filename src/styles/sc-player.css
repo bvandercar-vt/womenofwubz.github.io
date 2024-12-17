@@ -1,0 +1,32 @@
+.sc-iframe-wrapper iframe {
+  position: relative;
+  top: -5px; /* Hide top of iframe */
+  filter: invert(100%) hue-rotate(180deg);
+}
+
+.sc-iframe-wrapper {
+  width: 100%;
+  height: 295px; /* Hide bottom of iframe */
+  overflow: hidden; /* Hide the excess iframe */
+  border-radius: 20px;
+}
+
+.sc-title {
+  color: gray !important;
+  font-style: italic;
+  display: inline-flex;
+  gap: 0.5em;
+  padding-left: 1em;
+}
+
+.sc-player:hover .sc-title {
+  color: white !important;
+  --shadow-color: hotpink;
+  text-shadow:
+    0 0 5px black,
+    0 0 5px var(--shadow-color),
+    0 0 10px var(--shadow-color),
+    0 0 15px var(--shadow-color),
+    0 0 30px var(--shadow-color),
+    0 0 50px var(--shadow-color);
+}

@@ -1,0 +1,57 @@
+@import 'header.css';
+@import 'grid.css';
+@import 'grid-image.css';
+@import 'sc-player.css';
+
+/* General */
+
+body {
+  background-color: black;
+  color: white;
+  font-family: tahoma, sans-serif;
+}
+
+*:hover {
+  transition: 0.2s;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.2em;
+}
+
+a {
+  text-decoration: none;
+  cursor: alias;
+}
+
+a:link,
+a:visited {
+  color: inherit;
+}
+
+.hidden {
+  max-height: 0px;
+}
+
+.display-none {
+  display: none;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+#main-body {
+  margin: auto;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  html,
+  body {
+    overflow-x: hidden;
+    margin: 0;
+  }
+}

@@ -1,0 +1,28 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 40%), 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.grid-item {
+  /* Position */
+  aspect-ratio: 1 / 1;
+
+  /* Appearance */
+  border-radius: 30px;
+
+  /* Children */
+  overflow: hidden;
+}
+
+.grid-item:hover {
+  --shadow-color: hotpink;
+  box-shadow:
+    0 0 5px black,
+    0 0 5px var(--shadow-color),
+    0 0 10px var(--shadow-color),
+    0 0 15px var(--shadow-color),
+    0 0 30px var(--shadow-color),
+    0 0 50px var(--shadow-color);
+}
