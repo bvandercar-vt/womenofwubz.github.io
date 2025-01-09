@@ -5,6 +5,10 @@ on:
     branches:
       - master
 
+concurrency: # prevent concurrent deploys doing strange things
+  group: deploy-to-neocities
+  cancel-in-progress: true
+
 permissions:
   contents: read
   pages: write
@@ -41,9 +45,6 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     if: github.ref == 'refs/heads/master'
 
     steps:
@@ -53,14 +54,11 @@ jobs:
           name: production-files
           path: ./dist
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy to neocities
+        uses: bcomnes/deploy-to-neocities@v3
         with:
-          path: './dist'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
+          cleanup: false
+          neocities_supporter: false # set this to true if you have a supporter account and want to bypass unsuported files filter.
+          preview_before_deploy: true # print a deployment plan prior to waiting for files to upload.
+          dist_dir: public
