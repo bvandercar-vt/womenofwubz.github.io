@@ -42,15 +42,15 @@ a:visited {
   border-radius: 50%;
 }
 
-.fa-soundcloud {
+.circle.fa-soundcloud {
   background-color: rgb(242, 111, 35);
 }
 
-.fa-instagram {
+.circle.fa-instagram {
   background-color: rgb(193, 53, 132);
 }
 
-.fa-envelope {
+.circle.fa-envelope {
   background-color: DeepSkyBlue;
 }
 
