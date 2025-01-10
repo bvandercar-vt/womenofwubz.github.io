@@ -9,6 +9,40 @@
   height: 100%;
 }
 
+.grid-image .links {
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+}
+
+.grid-image .links .circle {
+  /* Center the icon */
+  --circle-size: 1.5em;
+  height: var(--circle-size);
+  width: var(--circle-size);
+  line-height: var(--circle-size);
+  text-align: center;
+  margin: 0 1px;
+
+  /* Appearance */
+  font-size: 1.5em;
+  border: 5px solid black;
+  transition: 0.1s;
+  opacity: 0.85;
+}
+
+.grid-image .links .circle:hover {
+  font-size: 1.6em;
+  box-shadow: 0 0 40px black;
+}
+
+.grid-image .links .fa-comment {
+  position: absolute;
+  font-size: 0.6em;
+  top: 0.5em;
+  left: 1.7em;
+}
+
 .grid-image .caption {
   position: absolute;
   bottom: 0.5em;

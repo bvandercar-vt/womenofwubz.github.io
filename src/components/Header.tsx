@@ -1,4 +1,4 @@
-import { INSTAGRAM_USERNAME } from '../contants'
+import { copyEmail, INSTAGRAM_USERNAME } from '../contants'
 
 export const Header = () => {
   return (
@@ -26,15 +26,7 @@ export const Header = () => {
             href={`https://www.instagram.com/${INSTAGRAM_USERNAME}/`}
             target="_blank"
           />
-          <a
-            className="circle fa fa-envelope"
-            title="Email"
-            onClick={() => {
-              const EMAIL = 'WomanhoodOfWubz1@gmail.com'
-              navigator.clipboard.writeText(EMAIL)
-              alert('Copied to clipboard: ' + EMAIL)
-            }}
-          />
+          <a className="circle fa fa-envelope" title="Email" onClick={copyEmail} />
           <a
             className="circle fa fa-soundcloud"
             title="SoundCloud"
