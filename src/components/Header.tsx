@@ -1,3 +1,5 @@
+import { INSTAGRAM_USERNAME } from '../contants'
+
 export const Header = () => {
   return (
     <header>
@@ -21,7 +23,7 @@ export const Header = () => {
           <a
             className="circle fa fa-instagram"
             title="Instagram"
-            href="https://www.instagram.com/womanhoodofwubz/"
+            href={`https://www.instagram.com/${INSTAGRAM_USERNAME}/`}
             target="_blank"
           />
           <a

@@ -48,6 +48,26 @@ header {
   border-radius: var(--text-border-radius);
 }
 
+#social-links .circle {
+  /* Center the icon */
+  --circle-size: 2em;
+  height: var(--circle-size);
+  width: var(--circle-size);
+  line-height: var(--circle-size);
+  text-align: center;
+  margin: 0 1px;
+
+  /* Appearance */
+  font-size: 1.5em;
+  border: 5px solid black;
+  transition: 0.1s;
+}
+
+#social-links .circle:hover {
+  font-size: 2em;
+  box-shadow: 0 0 40px black;
+}
+
 #bio {
   /* Position */
   display: flex;
@@ -84,38 +104,6 @@ header {
 
 #bio :last-child {
   padding-bottom: 0.2em;
-}
-
-#social-links .circle {
-  /* Center the icon */
-  --circle-size: 2em;
-  height: var(--circle-size);
-  width: var(--circle-size);
-  line-height: var(--circle-size);
-  text-align: center;
-  margin: 0 1px;
-
-  /* Appearance */
-  font-size: 1.5em;
-  border: 5px solid black;
-  transition: 0.1s;
-}
-
-#social-links .circle:hover {
-  font-size: 2em;
-  box-shadow: 0 0 40px black;
-}
-
-#social-links .fa-soundcloud {
-  background-color: rgb(242, 111, 35);
-}
-
-#social-links .fa-instagram {
-  background-color: rgb(193, 53, 132);
-}
-
-#social-links .fa-envelope {
-  background-color: DeepSkyBlue;
 }
 
 @media (max-width: 1500px) {
