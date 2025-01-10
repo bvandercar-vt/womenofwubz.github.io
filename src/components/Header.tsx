@@ -4,15 +4,19 @@ export const Header = () => {
       <div id="header-center">
         <img src="/Logo.png" alt="Womanhood of Wubz" id="header-logo-img" />
         <div id="bio">
-          <p>📍Denver, CO</p>
-          <p>
-            Bringing you the accessories that celebrate the magic of good music and the power of
-            connection ✨
-          </p>
+          <span>
+            <p>📍 Denver, CO 📍</p>
+            <p>
+              ✨ Bringing you the accessories that celebrate the magic of good music and the power
+              of connection ✨
+            </p>
+          </span>
         </div>
       </div>
       <div id="header-right">
-        <p>Connect with us!</p>
+        <span>
+          <p>Connect with us!</p>
+        </span>
         <div id="social-links" role="region" aria-label="links and social media">
           <a
             className="circle fa fa-instagram"

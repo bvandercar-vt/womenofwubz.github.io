@@ -6,13 +6,12 @@
 /* General */
 
 body {
-  background-color: black;
-  color: white;
+  background-image: url('/public/background.png');
+  background-position: center center;
+  background-repeat: repeat;
+  background-size: 80em;
+  color: black;
   font-family: tahoma, sans-serif;
-}
-
-*:hover {
-  transition: 0.2s;
 }
 
 p {
