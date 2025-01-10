@@ -4,6 +4,8 @@ import '@fontsource/roboto-condensed'
 import 'font-awesome/css/font-awesome.min.css'
 import './styles/index.css'
 
+import './api/soundcloudWidget'
+
 import { Grid } from './components/Grid'
 import { GridImage } from './components/GridImage'
 import { Header } from './components/Header'
