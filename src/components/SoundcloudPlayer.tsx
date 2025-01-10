@@ -1,4 +1,4 @@
-import { useEffect, useId, useRef } from 'react'
+import { useId, useRef } from 'react'
 
 export const SoundcloudPlayer = ({
   href,
@@ -12,15 +12,6 @@ export const SoundcloudPlayer = ({
   const id = useId()
   const iFrameElement = useRef(null)
 
-  useEffect(() => {
-    if (iFrameElement) {
-      const widget = window.SC.Widget(id)
-      widget.bind(window.SC.Widget.Events.READY, () => {
-        widget.play()
-      })
-    }
-  }, [iFrameElement])
-
   return (
     <div className="sc-player" role="group" aria-label="soundcloud player">
       <a className="sc-title" href={href} target="_blank" title="SoundCloud playlist">
@@ -33,6 +24,7 @@ export const SoundcloudPlayer = ({
           height="350"
           scrolling="no"
           frameBorder="no"
+          allow="autoplay"
           src={src}
           id={id}
           ref={iFrameElement}
