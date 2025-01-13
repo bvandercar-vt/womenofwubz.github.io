@@ -1,3 +1,4 @@
+@import 'circle-icon.css';
 @import 'header.css';
 @import 'grid.css';
 @import 'grid-image.css';
@@ -38,19 +39,15 @@ a:visited {
   display: none;
 }
 
-.circle {
-  border-radius: 50%;
-}
-
-.circle.fa-soundcloud {
+.soundcloud {
   background-color: rgb(242, 111, 35);
 }
 
-.circle.fa-instagram {
+.instagram {
   background-color: rgb(193, 53, 132);
 }
 
-.circle.fa-envelope {
+.email {
   background-color: DeepSkyBlue;
 }
 

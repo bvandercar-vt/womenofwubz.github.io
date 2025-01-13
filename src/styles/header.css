@@ -48,24 +48,34 @@ header {
   border-radius: var(--text-border-radius);
 }
 
-#social-links .circle {
+#social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+#social-links .circle-icon {
   /* Center the icon */
-  --circle-size: 2em;
+  --circle-size: 3em;
   height: var(--circle-size);
   width: var(--circle-size);
-  line-height: var(--circle-size);
-  text-align: center;
-  margin: 0 1px;
 
   /* Appearance */
-  font-size: 1.5em;
   border: 5px solid black;
   transition: 0.1s;
 }
 
-#social-links .circle:hover {
+#social-links .circle-icon svg {
   font-size: 2em;
+}
+
+#social-links .circle-icon:hover {
   box-shadow: 0 0 40px black;
+}
+
+#social-links .circle-icon:hover svg {
+  font-size: 2.2em;
 }
 
 #bio {

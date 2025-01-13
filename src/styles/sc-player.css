@@ -15,8 +15,7 @@
   color: hotpink !important;
   font-style: italic;
   display: inline-flex;
-  gap: 0.5em;
-  padding: 0.3em 1em 0 1em;
+  padding: 0.3em 1em 0.2em 1em;
   background-color: black;
   border-radius: 20px 20px 0 0;
   font-weight: bold;
@@ -31,12 +30,12 @@
 }
 
 .sc-player {
-  margin-top: -1em;
+  margin-top: -0.5em;
   margin-bottom: 0.6em;
 }
 
 @media (max-width: 800px) {
   .sc-player {
-    margin-top: 0em;
+    margin-top: -0.5em;
   }
 }

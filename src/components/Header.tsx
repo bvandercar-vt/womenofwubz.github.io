@@ -1,4 +1,7 @@
+import { faInstagram, faSoundcloud } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { copyEmail, INSTAGRAM_USERNAME } from '../contants'
+import { CircleIcon } from './CircleIcon'
 
 export const Header = () => {
   return (
@@ -20,16 +23,18 @@ export const Header = () => {
           <p>Connect with us!</p>
         </span>
         <div id="social-links" role="region" aria-label="links and social media">
-          <a
-            className="circle fa fa-instagram"
+          <CircleIcon
+            className="instagram"
             title="Instagram"
+            icon={faEnvelope}
             href={`https://www.instagram.com/${INSTAGRAM_USERNAME}/`}
             target="_blank"
           />
-          <a className="circle fa fa-envelope" title="Email" onClick={copyEmail} />
-          <a
-            className="circle fa fa-soundcloud"
+          <CircleIcon className="email" title="Email" icon={faInstagram} onClick={copyEmail} />
+          <CircleIcon
+            className="soundcloud"
             title="SoundCloud"
+            icon={faSoundcloud}
             href="https://soundcloud.com/marisa-kerstanski"
             target="_blank"
           />
