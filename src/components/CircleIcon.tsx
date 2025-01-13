@@ -10,6 +10,7 @@ export const CircleIcon = ({
   <a
     className={classNames('circle', 'circle-icon', className)}
     aria-label={props['aria-label'] ?? props['title']}
+    target="_blank"
     {...props}
   >
     <FontAwesomeIcon icon={icon} />

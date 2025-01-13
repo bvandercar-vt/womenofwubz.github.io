@@ -26,17 +26,15 @@ export const Header = () => {
           <CircleIcon
             className="instagram"
             title="Instagram"
-            icon={faEnvelope}
+            icon={faInstagram}
             href={`https://www.instagram.com/${INSTAGRAM_USERNAME}/`}
-            target="_blank"
           />
-          <CircleIcon className="email" title="Email" icon={faInstagram} onClick={copyEmail} />
+          <CircleIcon className="email" title="Email" icon={faEnvelope} onClick={copyEmail} />
           <CircleIcon
             className="soundcloud"
             title="SoundCloud"
             icon={faSoundcloud}
             href="https://soundcloud.com/marisa-kerstanski"
-            target="_blank"
           />
         </div>
       </div>
