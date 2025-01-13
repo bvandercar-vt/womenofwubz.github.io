@@ -1,3 +1,5 @@
+import { faSoundcloud } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useId, useRef } from 'react'
 
 export const SoundcloudPlayer = ({
@@ -15,8 +17,13 @@ export const SoundcloudPlayer = ({
   return (
     <div className="sc-player" role="group" aria-label="soundcloud player">
       <a className="sc-title" href={href} target="_blank" title="SoundCloud playlist">
-        <i className="fa fa-soundcloud" />
-        {title}
+        <p>
+          <FontAwesomeIcon
+            icon={faSoundcloud}
+            style={{ paddingRight: '0.2em', verticalAlign: 'middle', paddingBottom: '1px' }}
+          />
+          {title}
+        </p>
       </a>
       <div className="sc-iframe-wrapper">
         <iframe

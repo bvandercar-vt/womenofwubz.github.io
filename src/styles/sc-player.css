@@ -15,7 +15,7 @@
   color: hotpink !important;
   font-style: italic;
   display: inline-flex;
-  padding: 0.3em 1em 0.2em 1em;
+  padding: 0.3em 1em 0em 1em;
   background-color: black;
   border-radius: 20px 20px 0 0;
   font-weight: bold;
@@ -30,7 +30,6 @@
 }
 
 .sc-player {
-  margin-top: -0.5em;
   margin-bottom: 0.6em;
 }
 

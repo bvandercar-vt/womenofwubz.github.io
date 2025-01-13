@@ -1,5 +1,8 @@
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import { copyEmail, INSTAGRAM_USERNAME } from '../contants'
+import { CircleIcon } from './CircleIcon'
 
 export const GridImage = ({
   src,
@@ -21,15 +24,13 @@ export const GridImage = ({
       <img src={src} />
       {isHovered && (
         <div className="links" role="group" aria-label="send links">
-          <a
-            className="circle fa fa-instagram"
-            title="Instagram Message"
+          <CircleIcon
+            className="instagram"
+            title="Instagram"
+            icon={faInstagram}
             href={`https://ig.me/m/${INSTAGRAM_USERNAME}`}
-            target="_blank"
-          >
-            <span className="fa fa-comment" />
-          </a>
-          <a className="circle fa fa-envelope" title="Email" onClick={copyEmail} />
+          />
+          <CircleIcon className="email" title="Email" icon={faEnvelope} onClick={copyEmail} />
         </div>
       )}
       <div className="caption">

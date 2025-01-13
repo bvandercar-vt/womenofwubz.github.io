@@ -45,6 +45,7 @@ header {
   color: Aquamarine;
   font-style: italic;
   background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 10px black;
   border-radius: var(--text-border-radius);
 }
 
@@ -63,6 +64,7 @@ header {
 
   /* Appearance */
   border: 5px solid black;
+  box-shadow: 0 0 30px black;
   transition: 0.1s;
 }
 
@@ -71,7 +73,7 @@ header {
 }
 
 #social-links .circle-icon:hover {
-  box-shadow: 0 0 40px black;
+  box-shadow: 0 0 40px yellow;
 }
 
 #social-links .circle-icon:hover svg {
@@ -103,6 +105,7 @@ header {
 #bio p {
   padding: 0 0.5em;
   background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 15px black;
   border-radius: var(--text-border-radius);
   text-align: center;
 }
