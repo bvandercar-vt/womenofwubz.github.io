@@ -2,6 +2,7 @@ import { faInstagram, faSoundcloud } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { copyEmail, INSTAGRAM_USERNAME } from '../contants'
 import { CircleIcon } from './CircleIcon'
+import { DoubleText } from './DoubleText'
 
 export const Header = () => {
   return (
@@ -9,11 +10,11 @@ export const Header = () => {
       <div id="header-center">
         <img src="/Logo.png" alt="Womanhood of Wubz" id="header-logo-img" />
         <div id="bio">
-          <p>📍 Denver, CO 📍</p>
-          <p>
+          <DoubleText>📍 Denver, CO 📍</DoubleText>
+          <DoubleText>
             ✨ Bringing you the accessories that celebrate the magic of good music and the power of
             connection ✨
-          </p>
+          </DoubleText>
         </div>
       </div>
       <div id="header-right">

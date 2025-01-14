@@ -86,22 +86,17 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   margin-top: 0.5em;
-  margin-bottom: 0em;
+  margin-bottom: 0.5em;
 
   /* Text */
   color: lime;
   font-family: 'Outfit', sans-serif;
   font-size: 1.2em;
-  line-height: 2em;
 }
 
-#bio p {
-  /* Position */
-  z-index: 1;
-  text-align: center;
-
-  /* Text */
+#bio .text-back {
   --shadow-size-1: 0.8em;
   --shadow-color-1: rgb(47, 0, 80);
   --shadow-size-2: 1em;
@@ -127,15 +122,6 @@ header {
     0 0 var(--shadow-size-2) var(--shadow-color-2),
     0 0 var(--shadow-size-2) var(--shadow-color-2),
     0 0 var(--shadow-size-2) var(--shadow-color-2);
-}
-
-#bio :first-child {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-#bio :last-child {
-  padding-bottom: 0.2em;
 }
 
 @media (max-width: 1500px) {

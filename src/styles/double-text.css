@@ -1,0 +1,17 @@
+.text-container {
+  position: relative;
+  display: inline-block;
+}
+
+.text-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  color: transparent;
+}
+
+.text-front {
+  position: relative;
+  z-index: 1;
+}
