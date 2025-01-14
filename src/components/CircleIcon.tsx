@@ -4,14 +4,13 @@ import classNames from 'classnames'
 
 export const CircleIcon = ({
   icon,
-  className,
   ...props
 }: React.AnchorHTMLAttributes<HTMLAnchorElement> & Pick<FontAwesomeIconProps, 'icon'>) => (
   <a
-    className={classNames('circle', 'circle-icon', className)}
-    aria-label={props['aria-label'] ?? props['title']}
     target="_blank"
     {...props}
+    className={classNames('circle', props['className'])}
+    aria-label={props['aria-label'] ?? props['title']}
   >
     <FontAwesomeIcon icon={icon} />
   </a>

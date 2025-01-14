@@ -1,4 +1,3 @@
-@import 'circle-icon.css';
 @import 'double-text.css';
 @import 'header.css';
 @import 'grid.css';
@@ -30,6 +29,13 @@ a {
 a:link,
 a:visited {
   color: inherit;
+}
+
+.circle {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hidden {

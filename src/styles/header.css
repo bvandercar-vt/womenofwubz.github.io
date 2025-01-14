@@ -89,7 +89,7 @@ header {
   gap: 2px;
 }
 
-#social-links .circle-icon {
+#social-links .circle {
   /* Potition (Centered) */
   --circle-size: 3em;
   height: var(--circle-size);
@@ -101,15 +101,15 @@ header {
   transition: 0.1s;
 }
 
-#social-links .circle-icon svg {
+#social-links .circle svg {
   font-size: 2em;
 }
 
-#social-links .circle-icon:hover {
+#social-links .circle:hover {
   box-shadow: 0 0 40px yellow;
 }
 
-#social-links .circle-icon:hover svg {
+#social-links .circle:hover svg {
   font-size: 2.2em;
 }
 

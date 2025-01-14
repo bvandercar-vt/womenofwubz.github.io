@@ -19,7 +19,7 @@
   gap: 2px;
 }
 
-.grid-image .links .circle-icon {
+.grid-image .links .circle {
   /* Position (Centered) */
   --circle-size: 1.5em;
   height: var(--circle-size);
@@ -41,17 +41,38 @@
     0 0 40px yellow;
 }
 
-.grid-image .caption {
+.grid-image .bottom-left {
   position: absolute;
   bottom: 0.5em;
   left: 2em;
 }
 
-.grid-image .caption .title {
+.grid-image .title {
   color: purple;
   font-weight: bold;
+  text-shadow:
+    0 0 10px black,
+    0 0 10px black,
+    0 0 10px black,
+    0 0 10px black,
+    0 0 10px black,
+    0 0 10px black,
+    0 0 10px black,
+    0 0 10px black,
+    0 0 10px black,
+    0 0 10px black,
+    0 0 10px black,
+    0 0 10px black,
+    0 0 10px black,
+    0 0 10px black,
+    0 0 10px black,
+    0 0 10px black,
+    0 0 10px black,
+    0 0 10px black,
+    0 0 10px black,
+    0 0 10px black;
 }
 
-.grid-image .caption .subtitle {
+.grid-image .subtitle {
   color: grey;
 }
