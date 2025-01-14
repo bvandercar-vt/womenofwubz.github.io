@@ -16,7 +16,7 @@ header {
   margin-bottom: -8px;
 
   /* Glow */
-  --header-title-img-glow: drop-shadow(0 0 30px purple) drop-shadow(0 0 50px black)
+  --header-title-img-glow: drop-shadow(0 0 30px rgb(47, 0, 80)) drop-shadow(0 0 50px black)
     drop-shadow(0 0 30px black);
   -webkit-filter: var(--header-title-img-glow);
   filter: var(--header-title-img-glow);
@@ -45,7 +45,7 @@ header {
   color: Aquamarine;
   font-style: italic;
   background-color: rgba(0, 0, 0, 0.7);
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 5px black;
   border-radius: var(--text-border-radius);
 }
 
@@ -83,6 +83,7 @@ header {
 #bio {
   /* Position */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 0.5em;
@@ -95,19 +96,37 @@ header {
   line-height: 2em;
 }
 
-#bio span {
-  display: flex;
-  flex-direction: column; /* Stacks the <p> elements vertically */
-  align-items: center;
-  z-index: 1;
-}
-
 #bio p {
-  padding: 0 0.5em;
-  background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: 0 0 15px black;
-  border-radius: var(--text-border-radius);
+  /* Position */
+  z-index: 1;
   text-align: center;
+
+  /* Text */
+  --shadow-size-1: 0.8em;
+  --shadow-color-1: rgb(47, 0, 80);
+  --shadow-size-2: 1em;
+  --shadow-color-2: black;
+  text-shadow:
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-2) var(--shadow-color-2),
+    0 0 var(--shadow-size-2) var(--shadow-color-2),
+    0 0 var(--shadow-size-2) var(--shadow-color-2),
+    0 0 var(--shadow-size-2) var(--shadow-color-2),
+    0 0 var(--shadow-size-2) var(--shadow-color-2);
 }
 
 #bio :first-child {

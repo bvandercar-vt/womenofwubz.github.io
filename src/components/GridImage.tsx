@@ -1,6 +1,6 @@
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react'
+import { useId, useState } from 'react'
 import { copyEmail, INSTAGRAM_USERNAME } from '../contants'
 import { CircleIcon } from './CircleIcon'
 
@@ -10,10 +10,12 @@ export const GridImage = ({
   subtitle,
 }: {
   src: string
-  title: string
-  subtitle: string
+  title?: string
+  subtitle?: string
 }) => {
   const [isHovered, setIsHovered] = useState(false)
+
+  const titleId = useId()
 
   return (
     <div
@@ -21,7 +23,7 @@ export const GridImage = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <img src={src} />
+      <img src={src} aria-labelledby={titleId} />
       {isHovered && (
         <div className="links" role="group" aria-label="send links">
           <CircleIcon
@@ -34,8 +36,12 @@ export const GridImage = ({
         </div>
       )}
       <div className="caption">
-        <p className="title">{title}</p>
-        <p className="subtitle">{subtitle}</p>
+        {title && (
+          <p className="title" id={titleId}>
+            {title}
+          </p>
+        )}
+        {subtitle && <p className="subtitle">{subtitle}</p>}
       </div>
     </div>
   )
