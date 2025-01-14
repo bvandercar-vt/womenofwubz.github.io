@@ -10,10 +10,12 @@ export const Header = () => {
       <div id="header-center">
         <img src="/Logo.png" alt="Womanhood of Wubz" id="header-logo-img" />
         <div id="bio">
-          <DoubleText>📍 Denver, CO 📍</DoubleText>
           <DoubleText>
-            ✨ Bringing you the accessories that celebrate the magic of good music and the power of
-            connection ✨
+            <p>📍 Denver, CO 📍</p>
+            <p>
+              ✨ Bringing you the accessories that celebrate the magic of good music and the power
+              of connection ✨
+            </p>
           </DoubleText>
         </div>
       </div>

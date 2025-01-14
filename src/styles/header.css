@@ -129,6 +129,12 @@ header {
   font-size: 1.2em;
 }
 
+#bio p {
+  &:not(:last-child) {
+    margin-bottom: 0.2em;
+  }
+}
+
 #bio .text-back {
   --shadow-size-1: 0.8em;
   --shadow-color-1: rgb(47, 0, 80);
