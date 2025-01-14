@@ -2,7 +2,7 @@ import type { FontAwesomeIconProps } from '@fortawesome/react-fontawesome'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import classNames from 'classnames'
 
-export const CircleIcon = ({
+export const CircleLink = ({
   icon,
   ...props
 }: React.AnchorHTMLAttributes<HTMLAnchorElement> & Pick<FontAwesomeIconProps, 'icon'>) => (
