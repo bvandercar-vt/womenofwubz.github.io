@@ -1,21 +1,30 @@
 .sc-iframe-wrapper iframe {
+  /* Position */
   position: relative;
   top: -5px; /* Hide top of iframe */
+
+  /* Appearance */
   filter: invert(100%) hue-rotate(180deg);
 }
 
 .sc-iframe-wrapper {
+  /* Position */
   width: 100%;
   height: 295px; /* Hide bottom of iframe */
   overflow: hidden; /* Hide the excess iframe */
+
+  /* Appearance */
   border-radius: 0 20px 20px 20px;
 }
 
 .sc-title {
-  color: hotpink !important;
-  font-style: italic;
+  /* Position */
   display: inline-flex;
   padding: 0.3em 1em 0em 1em;
+
+  /* Appearance */
+  color: hotpink !important;
+  font-style: italic;
   background-color: black;
   border-radius: 20px 20px 0 0;
   font-weight: bold;
@@ -31,9 +40,10 @@
 
 .sc-player {
   margin-bottom: 0.6em;
+  margin-top: -0.3em;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1500px) {
   .sc-player {
     margin-top: -0.5em;
   }

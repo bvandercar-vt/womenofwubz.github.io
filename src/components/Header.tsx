@@ -18,23 +18,25 @@ export const Header = () => {
         </div>
       </div>
       <div id="header-right">
-        <span>
-          <p>Connect with us!</p>
-        </span>
-        <div id="social-links" role="region" aria-label="links and social media">
-          <CircleIcon
-            className="instagram"
-            title="Instagram"
-            icon={faInstagram}
-            href={`https://www.instagram.com/${INSTAGRAM_USERNAME}/`}
-          />
-          <CircleIcon className="email" title="Email" icon={faEnvelope} onClick={copyEmail} />
-          <CircleIcon
-            className="soundcloud"
-            title="SoundCloud"
-            icon={faSoundcloud}
-            href="https://soundcloud.com/marisa-kerstanski"
-          />
+        <div id="social-links-wrapper" role="region" aria-label="links and social media">
+          <span id="connect">
+            <DoubleText>Connect with us!</DoubleText>
+          </span>
+          <div id="social-links">
+            <CircleIcon
+              className="instagram"
+              title="Instagram"
+              icon={faInstagram}
+              href={`https://www.instagram.com/${INSTAGRAM_USERNAME}/`}
+            />
+            <CircleIcon className="email" title="Email" icon={faEnvelope} onClick={copyEmail} />
+            <CircleIcon
+              className="soundcloud"
+              title="SoundCloud"
+              icon={faSoundcloud}
+              href="https://soundcloud.com/marisa-kerstanski"
+            />
+          </div>
         </div>
       </div>
     </header>

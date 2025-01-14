@@ -20,7 +20,7 @@
 }
 
 .grid-image .links .circle-icon {
-  /* Center the icon */
+  /* Position (Centered) */
   --circle-size: 1.5em;
   height: var(--circle-size);
   width: var(--circle-size);

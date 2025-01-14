@@ -1,7 +1,12 @@
-import type { PropsWithChildren } from 'react'
+import classNames from 'classnames'
+import type { HTMLAttributes, PropsWithChildren } from 'react'
 
-export const DoubleText = ({ children }: PropsWithChildren) => (
-  <div className="text-container">
+export const DoubleText = ({
+  children,
+  className,
+  ...props
+}: PropsWithChildren<HTMLAttributes<HTMLSpanElement>>) => (
+  <div {...props} className={classNames('double-text-container', className)}>
     <span className="text-back" aria-hidden>
       {children}
     </span>

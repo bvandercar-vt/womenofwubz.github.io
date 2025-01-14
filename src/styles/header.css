@@ -15,7 +15,7 @@ header {
   padding-top: 5px;
   margin-bottom: -8px;
 
-  /* Glow */
+  /* Appearance - Glow */
   --header-title-img-glow: drop-shadow(0 0 30px rgb(47, 0, 80)) drop-shadow(0 0 50px black)
     drop-shadow(0 0 30px black);
   -webkit-filter: var(--header-title-img-glow);
@@ -28,7 +28,7 @@ header {
   right: 100px;
   bottom: 0px;
 
-  /* Text */
+  /* Appearance */
   text-align: right;
 }
 
@@ -38,15 +38,48 @@ header {
   align-items: center; /* Optional: Centers the content vertically */
 }
 
-#header-right p {
+#header-right #connect {
+  /* Position */
   display: inline-block;
   margin-bottom: 0.3em;
-  padding: 0.3em 0.8em;
+
+  /* Appearance */
   color: Aquamarine;
   font-style: italic;
-  background-color: rgba(0, 0, 0, 0.7);
-  box-shadow: 0 0 5px black;
-  border-radius: var(--text-border-radius);
+}
+
+#header-right #connect .text-back {
+  --shadow-size-1: 0.8em;
+  --shadow-color-1: rgb(47, 0, 80);
+  --shadow-size-2: 1em;
+  --shadow-color-2: black;
+  text-shadow:
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-1) var(--shadow-color-1),
+    0 0 var(--shadow-size-2) var(--shadow-color-2),
+    0 0 var(--shadow-size-2) var(--shadow-color-2),
+    0 0 var(--shadow-size-2) var(--shadow-color-2),
+    0 0 var(--shadow-size-2) var(--shadow-color-2),
+    0 0 var(--shadow-size-2) var(--shadow-color-2);
+}
+
+#social-links-wrapper {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 #social-links {
@@ -57,7 +90,7 @@ header {
 }
 
 #social-links .circle-icon {
-  /* Center the icon */
+  /* Potition (Centered) */
   --circle-size: 3em;
   height: var(--circle-size);
   width: var(--circle-size);
@@ -90,7 +123,7 @@ header {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 
-  /* Text */
+  /* Appearance */
   color: lime;
   font-family: 'Outfit', sans-serif;
   font-size: 1.2em;
@@ -134,9 +167,24 @@ header {
     right: auto;
     line-height: 1em;
 
-    /* Text */
+    /* Appearance */
     text-align: center;
   }
+
+  #header-right #connect {
+    /* Position */
+    position: absolute;
+    left: 50%;
+    max-width: 4em;
+    text-align: right;
+    margin: 0;
+
+    /* Appearance */
+    color: Aquamarine;
+    font-style: italic;
+    transform: translateX(-10.1em) translateY(0.75em);
+  }
+
   #header-logo-img {
     max-width: calc(85%);
   }
