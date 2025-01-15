@@ -5,27 +5,47 @@ import './styles/index.css'
 
 import './api/soundcloudWidget'
 
+import type { Asset, EntryFieldTypes, EntrySkeletonType } from 'contentful'
+import { createClient } from 'contentful'
+import { isString } from 'lodash'
+import { useEffect, useState } from 'react'
 import { Grid } from './components/Grid'
 import { GridImage } from './components/GridImage'
 import { Header } from './components/Header'
 import { SoundcloudPlayer } from './components/SoundcloudPlayer'
 
-const Items_ = [
-  [
-    'Santa Hat',
-    'December 2024 drop',
-    'https://media.istockphoto.com/id/183296619/photo/a-festive-red-and-white-santa-hat-on-a-white-background.jpg?s=1024x1024&w=is&k=20&c=8ms7_SRViSNTrcJup1RDsLjncrwo3ilJ5kSl5qeai8o=',
-  ],
-  [
-    'This Guys Hat',
-    'December 2024 drop',
-    'https://m.media-amazon.com/images/I/71Z4vA7ALoL._AC_SX569_.jpg',
-  ],
-  ['Dino Hat', 'June 2024 drop', 'https://m.media-amazon.com/images/I/71+M9BwrF8L._AC_SY741_.jpg'],
-]
-const Items = [...Items_, ...Items_, ...Items_]
+type Product = EntrySkeletonType<{
+  image: EntryFieldTypes.AssetLink
+  title?: EntryFieldTypes.Text
+  subtitle?: EntryFieldTypes.Text
+  number?: EntryFieldTypes.Integer
+  price?: EntryFieldTypes.Number
+  soldOut?: EntryFieldTypes.Boolean
+  type?: EntryFieldTypes.Text
+}>
 
 export const App = () => {
+  const [data, setData] = useState<ContentfulResponse>()
+
+  const contentfulClient = createClient({
+    space: 'pjsrst0mmdyo',
+    accessToken: 'C4coD3wjKuYJ7EN1qiQOLZsHc9mvPGUNVnEomku8HVk',
+  })
+
+  type ContentfulResponse = Awaited<ReturnType<typeof contentfulClient.getEntries<Product>>>
+
+  useEffect(() => {
+    contentfulClient
+      .getEntries<Product>({
+        content_type: 'product',
+        order: ['-fields.number'],
+      })
+      .then((data) => {
+        setData(data)
+      })
+      .catch((error) => alert(error))
+  }, [])
+
   return (
     <>
       <Header />
@@ -36,9 +56,28 @@ export const App = () => {
           title="Womanhood Of Wubz - Volume 3"
         />
         <Grid>
-          {Items.map((item) => (
-            <GridImage src={item[2]} title={item[0]} subtitle={item[1]} />
-          ))}
+          {data &&
+            data.items.map((item) => {
+              const { image, title, subtitle, number, type, price, soldOut } = item.fields
+
+              const url = (image as Asset)?.fields?.file?.url
+              if (!url || !isString(url)) return null
+
+              return (
+                <GridImage
+                  src={url}
+                  title={
+                    <>
+                      {title} {<span className="type">{type}</span>}
+                    </>
+                  }
+                  subtitle={subtitle}
+                  number={number}
+                  price={price}
+                  soldOut={soldOut}
+                />
+              )
+            })}
         </Grid>
       </div>
     </>

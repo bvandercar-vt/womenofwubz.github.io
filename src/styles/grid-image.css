@@ -1,6 +1,26 @@
-.grid-image img {
-  width: 100%;
-  height: 100%;
+.grid-item {
+  /* Position */
+  aspect-ratio: 1 / 1;
+  z-index: 1;
+
+  /* Appearance */
+  border-radius: 30px;
+  border: 5px solid indigo;
+
+  /* Children */
+  overflow: hidden;
+}
+
+.grid-item:hover {
+  --shadow-color: Fuchsia;
+  box-shadow:
+    0 0 5px black,
+    0 0 5px var(--shadow-color),
+    0 0 10px var(--shadow-color),
+    0 0 15px var(--shadow-color),
+    0 0 30px var(--shadow-color),
+    0 0 50px var(--shadow-color);
+  border-color: yellow;
 }
 
 .grid-image {
@@ -9,17 +29,28 @@
   height: 100%;
 }
 
-.grid-image .links {
+.grid-image img {
+  position: absolute;
+  top: calc(50% + 70px);
+  left: 50%;
+  width: 125%;
+  transform: translate(-50%, -50%);
+}
+
+.grid-image .upper-right {
   position: absolute;
   right: 0.5em;
   top: 0.5em;
+}
+
+.grid-image .upper-right .links {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2px;
 }
 
-.grid-image .links .circle {
+.grid-image .upper-right .links .circle {
   /* Position (Centered) */
   --circle-size: 1.5em;
   height: var(--circle-size);
@@ -34,45 +65,101 @@
   opacity: 0.85;
 }
 
-.grid-image .links .circle:hover {
+.grid-image .upper-right .links .circle:hover {
   font-size: 1.6em;
   box-shadow:
-    0 0 10px black,
+    0 0 10px yellow,
     0 0 40px yellow;
+}
+
+.grid-item .upper-right .sold-out {
+  color: orangered;
+  font-weight: bold;
+  font-size: 1.8em;
+  margin-bottom: 0.3em;
 }
 
 .grid-image .bottom-left {
   position: absolute;
   bottom: 0.5em;
-  left: 2em;
+  left: 0.5em;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
 }
 
-.grid-image .title {
-  color: purple;
-  font-weight: bold;
+.grid-image .bottom-left .circle {
+  background-color: slateblue;
+  /* Potition (Centered) */
+  --circle-size: 2.5em;
+  height: var(--circle-size);
+  width: var(--circle-size);
+  float: left;
+
+  /* Appearance */
+  border: 5px solid indigo;
+  box-shadow: 0 0 5px black;
+}
+
+.grid-image .bottom-left .number-content {
+  font-size: 1.8em;
+  color: yellow;
+}
+
+.grid-image .bottom-left .caption {
+  margin-left: 0.3em;
+  margin-bottom: 0.3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.grid-image .bottom-left .caption .text-back,
+.grid-image .bottom-right.price .text-back,
+.grid-image .upper-right .sold-out .text-back {
+  --shadow-color: indigo;
+  --shadow-color-2: purple;
   text-shadow:
-    0 0 10px black,
-    0 0 10px black,
-    0 0 10px black,
-    0 0 10px black,
-    0 0 10px black,
-    0 0 10px black,
-    0 0 10px black,
-    0 0 10px black,
-    0 0 10px black,
-    0 0 10px black,
-    0 0 10px black,
-    0 0 10px black,
-    0 0 10px black,
-    0 0 10px black,
-    0 0 10px black,
-    0 0 10px black,
-    0 0 10px black,
-    0 0 10px black,
-    0 0 10px black,
-    0 0 10px black;
+    0 0 10px var(--shadow-color),
+    0 0 10px var(--shadow-color),
+    0 0 10px var(--shadow-color),
+    0 0 10px var(--shadow-color),
+    0 0 10px var(--shadow-color),
+    0 0 10px var(--shadow-color),
+    0 0 10px var(--shadow-color),
+    0 0 10px var(--shadow-color),
+    0 0 10px var(--shadow-color),
+    0 0 10px var(--shadow-color),
+    0 0 10px var(--shadow-color),
+    0 0 10px var(--shadow-color),
+    0 0 10px var(--shadow-color),
+    0 0 20px var(--shadow-color-2),
+    0 0 20px var(--shadow-color-2),
+    0 0 20px var(--shadow-color-2);
 }
 
-.grid-image .subtitle {
-  color: grey;
+.grid-image .bottom-left .title {
+  color: yellow;
+  font-weight: bold;
+}
+
+.grid-image .bottom-left .subtitle {
+  color: pink;
+}
+
+.grid-image .bottom-left .type {
+  font-weight: initial;
+  font-size: small;
+}
+
+.grid-image .bottom-right {
+  position: absolute;
+  right: 0.6em;
+  bottom: 0.5em;
+}
+
+.grid-item .bottom-right.price {
+  color: cyan;
+  font-size: 1em;
+  margin-bottom: 0.3em;
 }
