@@ -8,6 +8,7 @@ export const CircleLink = ({
 }: React.AnchorHTMLAttributes<HTMLAnchorElement> & Pick<FontAwesomeIconProps, 'icon'>) => (
   <a
     target="_blank"
+    tabIndex={0}
     {...props}
     className={classNames('circle', props['className'])}
     aria-label={props['aria-label'] ?? props['title']}

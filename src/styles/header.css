@@ -22,6 +22,53 @@ header {
   filter: var(--header-title-img-glow);
 }
 
+#buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding-top: 0.7em;
+}
+
+#buttons .button {
+  background-color: black;
+  border-radius: 0.5em;
+  border-width: 2px;
+  border-style: solid;
+  padding: 0.5em;
+  width: 9em;
+}
+
+#buttons .text-back {
+  --shadow-color: rgb(47, 0, 80);
+  box-shadow:
+    0 0 5px black,
+    0 0 5px var(--shadow-color),
+    0 0 10px var(--shadow-color),
+    0 0 10px var(--shadow-color),
+    0 0 10px var(--shadow-color),
+    0 0 10px var(--shadow-color),
+    0 0 15px var(--shadow-color),
+    0 0 30px var(--shadow-color),
+    0 0 50px var(--shadow-color);
+}
+
+#buttons .button:hover {
+  box-shadow: 0 0 40px yellow;
+  border-color: yellow !important;
+}
+
+#buttons .button#designed {
+  border-color: cyan;
+  color: cyan;
+}
+
+#buttons .button#custom {
+  border-color: orange;
+  color: orange;
+}
+
 #header-right {
   /* Position */
   position: absolute;
@@ -34,8 +81,8 @@ header {
 
 #header-right span {
   display: flex;
-  justify-content: center; /* Centers the content horizontally */
-  align-items: center; /* Optional: Centers the content vertically */
+  justify-content: center;
+  align-items: center;
 }
 
 #header-right #connect {

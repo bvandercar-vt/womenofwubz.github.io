@@ -1,5 +1,10 @@
 import { faInstagram, faSoundcloud } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import {
+  faArrowUpRightFromSquare,
+  faCircleArrowDown,
+  faEnvelope,
+} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { copyEmail, INSTAGRAM_USERNAME } from '../contants'
 import { CircleLink } from './CircleLink'
 import { DoubleText } from './DoubleText'
@@ -16,6 +21,28 @@ export const Header = () => {
               ✨ Bringing you the accessories that celebrate the magic of good music and the power
               of connection ✨
             </p>
+          </DoubleText>
+        </div>
+        <div id="buttons">
+          <DoubleText>
+            <a
+              className="button"
+              id="designed"
+              tabIndex={0}
+              onClick={() => alert('TODO: scroll to grid!')}
+            >
+              Designed Hats <FontAwesomeIcon icon={faCircleArrowDown} />
+            </a>
+          </DoubleText>
+          <DoubleText>
+            <a
+              className="button"
+              id="custom"
+              tabIndex={0}
+              onClick={() => alert('Page coming soon!')}
+            >
+              Custom Hats <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+            </a>
           </DoubleText>
         </div>
       </div>
