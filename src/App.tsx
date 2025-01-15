@@ -5,8 +5,7 @@ import './styles/index.css'
 
 import './api/soundcloudWidget'
 
-import type { Asset, EntryFieldTypes, EntrySkeletonType } from 'contentful'
-import { createClient } from 'contentful'
+import * as contentful from 'contentful'
 import { isString } from 'lodash'
 import { useEffect, useState } from 'react'
 import { Grid } from './components/Grid'
@@ -14,20 +13,20 @@ import { GridImage } from './components/GridImage'
 import { Header } from './components/Header'
 import { SoundcloudPlayer } from './components/SoundcloudPlayer'
 
-type Product = EntrySkeletonType<{
-  image: EntryFieldTypes.AssetLink
-  title?: EntryFieldTypes.Text
-  subtitle?: EntryFieldTypes.Text
-  number?: EntryFieldTypes.Integer
-  price?: EntryFieldTypes.Number
-  soldOut?: EntryFieldTypes.Boolean
-  type?: EntryFieldTypes.Text
+type Product = contentful.EntrySkeletonType<{
+  image: contentful.EntryFieldTypes.AssetLink
+  title?: contentful.EntryFieldTypes.Text
+  subtitle?: contentful.EntryFieldTypes.Text
+  number?: contentful.EntryFieldTypes.Integer
+  price?: contentful.EntryFieldTypes.Number
+  soldOut?: contentful.EntryFieldTypes.Boolean
+  type?: contentful.EntryFieldTypes.Text
 }>
 
 export const App = () => {
   const [data, setData] = useState<ContentfulResponse>()
 
-  const contentfulClient = createClient({
+  const contentfulClient = contentful.createClient({
     space: 'pjsrst0mmdyo',
     accessToken: 'C4coD3wjKuYJ7EN1qiQOLZsHc9mvPGUNVnEomku8HVk',
   })
@@ -60,7 +59,7 @@ export const App = () => {
             data.items.map((item) => {
               const { image, title, subtitle, number, type, price, soldOut } = item.fields
 
-              const url = (image as Asset)?.fields?.file?.url
+              const url = (image as contentful.Asset)?.fields?.file?.url
               if (!url || !isString(url)) return null
 
               return (
